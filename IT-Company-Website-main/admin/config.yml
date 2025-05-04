@@ -2,8 +2,10 @@ backend:
   name: github
   repo: ahmed025/SidiT
   branch: main
+  base_url: https://invigorating-love.up.railway.app         # Your local OAuth server (or deployed URL)
+  auth_endpoint: api/auth                 # Path to the auth endpoint
 
-media_folder: "assets/img" # Where uploaded images go
+media_folder: "assets/img"                # Where uploaded images go
 
 collections:
   - name: "pages"
@@ -17,7 +19,6 @@ collections:
           - { name: "hero_title", label: "Hero Title", widget: "string" }
           - { name: "hero_description", label: "Hero Description", widget: "text" }
           - { name: "hero_button_text", label: "Hero Button Text", widget: "string" }
-          # Add more fields as needed
 
   - name: "globals"
     label: "Globals"
@@ -26,7 +27,9 @@ collections:
         label: "Navigation"
         file: "content/globals/navigation.json"
         fields:
-          - { name: "menu_items", label: "Menu Items", widget: "list", fields: [
-              { name: "label", label: "Label", widget: "string" },
-              { name: "url", label: "URL", widget: "string" }
-            ] }
+          - name: "menu_items"
+            label: "Menu Items"
+            widget: "list"
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "url", label: "URL", widget: "string" }
