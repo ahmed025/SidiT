@@ -1,16 +1,15 @@
 backend:
   name: github
-  repo: ahmed025/SidiT        # Your GitHub repo
+  repo: ahmed025/SidiT
   branch: main
   base_url: https://sititech.up.railway.app
-  auth_endpoint: auth         # Custom auth endpoint (must be working)
+  auth_endpoint: auth
 
-media_folder: "assets/img"    # Where uploaded media files go in the repo
-public_folder: "/assets/img"  # How the CMS references them in URLs
+media_folder: "assets/img"
+public_folder: "/assets/img"
 
 media_library:
-  name: uploadcare            # Optional: you can remove this if you're not using Uploadcare
-  config: {}
+  name: default
 
 collections:
   - name: "pages"
@@ -24,17 +23,3 @@ collections:
           - { name: "hero_title", label: "Hero Title", widget: "string" }
           - { name: "hero_description", label: "Hero Description", widget: "text" }
           - { name: "hero_button_text", label: "Hero Button Text", widget: "string" }
-
-  - name: "globals"
-    label: "Globals"
-    files:
-      - name: "navigation"
-        label: "Navigation"
-        file: "content/globals/navigation.json"
-        fields:
-          - name: "menu_items"
-            label: "Menu Items"
-            widget: "list"
-            fields:
-              - { name: "label", label: "Label", widget: "string" }
-              - { name: "url", label: "URL", widget: "string" }
