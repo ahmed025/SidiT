@@ -1,11 +1,16 @@
 backend:
   name: github
-  repo: ahmed025/SidiT       # ✅ Make sure this repo is public or you’ve authenticated properly
+  repo: ahmed025/SidiT        # Your GitHub repo
   branch: main
-  base_url: sititech.up.railway.app
-  auth_endpoint: auth         # ❗️ Fix: should be just 'auth', not 'api/auth'
+  base_url: https://sititech.up.railway.app
+  auth_endpoint: auth         # Custom auth endpoint (must be working)
 
-media_folder: "assets/img"    # ✅ Path inside the repo where uploads go (frontend-side)
+media_folder: "assets/img"    # Where uploaded media files go in the repo
+public_folder: "/assets/img"  # How the CMS references them in URLs
+
+media_library:
+  name: uploadcare            # Optional: you can remove this if you're not using Uploadcare
+  config: {}
 
 collections:
   - name: "pages"
