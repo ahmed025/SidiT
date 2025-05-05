@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ahmed025/SidiT       # ✅ Make sure this repo is public or you’ve authenticated properly
   branch: main
-  base_url: https://invigorating-love.up.railway.app    # ✅ Your deployed Railway OAuth server
+  base_url: https://sititech.up.railway.app    # ✅ Your deployed Railway OAuth server
   auth_endpoint: auth         # ❗️ Fix: should be just 'auth', not 'api/auth'
 
 media_folder: "assets/img"    # ✅ Path inside the repo where uploads go (frontend-side)
