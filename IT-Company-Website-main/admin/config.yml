@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ahmed025/SidiT
   branch: main
-  base_url: https://siditechweb.vercel.app
+ site_domain: siditechweb.vercel.app
   auth_endpoint: /api/auth
  
 
