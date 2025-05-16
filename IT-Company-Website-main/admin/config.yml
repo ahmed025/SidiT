@@ -3,7 +3,7 @@ backend:
   repo: ahmed025/SidiT
   branch: main
   base_url: https://sititech.up.railway.app
-  auth_endpoint: /auth
+  auth_endpoint: /.netlify/functions/auth  # Critical fix for Netlify OAuth
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
