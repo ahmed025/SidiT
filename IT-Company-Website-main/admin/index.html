@@ -6,5 +6,20 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- This div is required for the CMS to mount -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script>
+      fetch("/admin/config.yml")
+        .then(res => res.text())
+        .then(config => {
+          window.CMS.init({ config: YAML.parse(config) });
+        })
+        .catch(err => {
+          document.body.innerHTML = "<h1>Failed to load CMS config</h1><pre>" + err + "</pre>";
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   </body>
 </html>
